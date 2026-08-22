@@ -4,12 +4,19 @@
 
 @section('content')
 <section class="hero">
+    @if(session('success'))
+        <div class="container" style="margin-bottom: 2rem;">
+            <div style="background-color: #d1fae5; color: #065f46; padding: 1rem 1.5rem; border-radius: 8px; font-weight: 600; text-align: center; border: 1px solid #10b981;">
+                {{ session('success') }}
+            </div>
+        </div>
+    @endif
     <div class="hero-blob"></div>
     <div class="container hero-content">
         <h1 class="hero-title">Tingkatkan Mood Anda dengan Setiap Tegukan</h1>
         <p style="font-size: 1.25rem; margin-bottom: 2rem;">Nikmati kreasi khas Matcha dan Coklat kami. Dibuat dengan bahan-bahan premium untuk membawa kebahagiaan di hari Anda.</p>
         <div class="d-flex gap-1">
-            <a href="#products" class="btn btn-matcha">Jelajahi Rasa</a>
+            <a href="{{ route('order.create') }}" class="btn btn-matcha">Pesan Sekarang</a>
             @guest
                 <a href="{{ route('register') }}" class="btn btn-outline">Gabung Sekarang</a>
             @endguest
@@ -30,6 +37,7 @@
             </div>
             <h3>Matcha Creamy</h3>
             <p>Teh hijau Jepang asli yang dicampur dengan racikan creamy khas kami. Rasa earthy, sedikit manis, dan sangat menyegarkan.</p>
+            <a href="{{ route('order.create', ['product' => 'Matcha Creamy']) }}" class="btn btn-matcha" style="margin-top: 1rem; display: inline-block;">Pesan Matcha</a>
         </div>
         
         <div class="product-card coklat">
@@ -38,6 +46,7 @@
             </div>
             <h3>Coklat Klasik</h3>
             <p>Coklat lezat yang kaya lumer menjadi minuman es yang lembut. Minuman kenyamanan paling utama untuk memuaskan rasa manis Anda.</p>
+            <a href="{{ route('order.create', ['product' => 'Coklat Klasik']) }}" class="btn btn-outline" style="margin-top: 1rem; display: inline-block;">Pesan Coklat</a>
         </div>
     </div>
 </section>
