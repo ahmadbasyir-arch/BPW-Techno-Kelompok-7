@@ -21,8 +21,13 @@
                 Kami percaya bahwa kualitas terbaik berasal dari bahan yang terbaik. Setiap daun matcha dan biji kakao yang kami gunakan dipilih dengan sangat cermat untuk memastikan Anda mendapatkan pengalaman rasa yang kaya, creamy, dan tak terlupakan.
             </p>
             <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--color-matcha-dark);">Komitmen Kami</h2>
-            <p style="line-height: 1.7; color: var(--color-gray);">
+            <p style="margin-bottom: 1.5rem; line-height: 1.7; color: var(--color-gray);">
                 Kepuasan Anda adalah prioritas kami. Kami terus berinovasi dalam meracik minuman yang pas untuk segala suasana—baik saat Anda butuh dorongan energi di pagi hari, atau sekadar ingin bersantai di sore hari.
+            </p>
+            <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--color-matcha-dark);">Temukan Kami</h2>
+            <p style="line-height: 1.7; color: var(--color-gray);">
+                Ikuti terus perjalanan manis kami, berikan masukan Anda, dan bagikan momen keceriaan dengan menandai akun Instagram kami di 
+                <a href="https://instagram.com/creamy._mood" target="_blank" style="color: var(--color-matcha); font-weight: 600; text-decoration: none; border-bottom: 1px dotted currentColor;">@creamy._mood</a>.
             </p>
         </div>
     </div>

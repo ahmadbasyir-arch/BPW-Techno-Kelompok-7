@@ -22,7 +22,6 @@
                 <a href="{{ route('home') }}" class="nav-link">Beranda</a>
                 <a href="{{ route('about') }}" class="nav-link">Tentang Kami</a>
                 <a href="{{ route('testimonials') }}" class="nav-link">Testimoni</a>
-                <a href="{{ route('order.create') }}" class="nav-link" style="color: var(--color-matcha); font-weight: 600;">Pesan</a>
                 
                 @auth
                     <a href="{{ route('profile') }}" class="nav-link">Profil</a>

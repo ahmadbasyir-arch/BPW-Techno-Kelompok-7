@@ -16,9 +16,8 @@
         <h1 class="hero-title">Tingkatkan Mood Anda dengan Setiap Tegukan</h1>
         <p style="font-size: 1.25rem; margin-bottom: 2rem;">Nikmati kreasi khas Matcha dan Coklat kami. Dibuat dengan bahan-bahan premium untuk membawa kebahagiaan di hari Anda.</p>
         <div class="d-flex gap-1">
-            <a href="{{ route('order.create') }}" class="btn btn-matcha">Pesan Sekarang</a>
             @guest
-                <a href="{{ route('register') }}" class="btn btn-outline">Gabung Sekarang</a>
+                <a href="{{ route('register') }}" class="btn btn-matcha">Gabung Sekarang</a>
             @endguest
         </div>
     </div>
@@ -37,7 +36,6 @@
             </div>
             <h3>Matcha Creamy</h3>
             <p>Teh hijau Jepang asli yang dicampur dengan racikan creamy khas kami. Rasa earthy, sedikit manis, dan sangat menyegarkan.</p>
-            <a href="{{ route('order.create', ['product' => 'Matcha Creamy']) }}" class="btn btn-matcha" style="margin-top: 1rem; display: inline-block;">Pesan Matcha</a>
         </div>
         
         <div class="product-card coklat">
@@ -46,7 +44,6 @@
             </div>
             <h3>Coklat Klasik</h3>
             <p>Coklat lezat yang kaya lumer menjadi minuman es yang lembut. Minuman kenyamanan paling utama untuk memuaskan rasa manis Anda.</p>
-            <a href="{{ route('order.create', ['product' => 'Coklat Klasik']) }}" class="btn btn-outline" style="margin-top: 1rem; display: inline-block;">Pesan Coklat</a>
         </div>
     </div>
 </section>
