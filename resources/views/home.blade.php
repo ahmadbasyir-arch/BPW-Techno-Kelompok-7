@@ -31,16 +31,16 @@
     
     <div class="product-grid">
         <div class="product-card matcha">
-            <div class="product-icon">
-                <img src="{{ asset('images/logo.png') }}" alt="Minuman Matcha">
+            <div class="product-icon" style="width: 100%; max-width: 250px; height: auto; border-radius: 12px; background: transparent; box-shadow: none;">
+                <img src="{{ asset('images/matcha.png') }}" alt="Minuman Matcha" style="width: 100%; height: auto; border-radius: 12px; object-fit: contain;">
             </div>
             <h3>Matcha Creamy</h3>
-            <p>Teh hijau Jepang asli yang dicampur dengan racikan creamy khas kami. Rasa earthy, sedikit manis, dan sangat menyegarkan.</p>
+            <p>Minuman matcha manis dengan tekstur yang super creamy dan lembut. Menghadirkan keseimbangan rasa manis nan lezat untuk memeriahkan hari Anda.</p>
         </div>
         
         <div class="product-card coklat">
-            <div class="product-icon">
-                <img src="{{ asset('images/logo.png') }}" alt="Minuman Coklat">
+            <div class="product-icon" style="width: 100%; max-width: 250px; height: auto; border-radius: 12px; background: transparent; box-shadow: none;">
+                <img src="{{ asset('images/coklat.png') }}" alt="Minuman Coklat" style="width: 100%; height: auto; border-radius: 12px; object-fit: contain;">
             </div>
             <h3>Coklat Klasik</h3>
             <p>Coklat lezat yang kaya lumer menjadi minuman es yang lembut. Minuman kenyamanan paling utama untuk memuaskan rasa manis Anda.</p>
