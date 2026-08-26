@@ -14,6 +14,7 @@
     <div class="hero-blob"></div>
     <div class="container hero-content">
         <h1 class="hero-title">Tingkatkan Mood Anda dengan Setiap Tegukan</h1>
+        <p class="hero-tagline">✨ Segarnya Matcha, Lezatnya Coklat ✨</p>
         <p style="font-size: 1.25rem; margin-bottom: 2rem;">Nikmati kreasi khas Matcha dan Coklat kami. Dibuat dengan bahan-bahan premium untuk membawa kebahagiaan di hari Anda.</p>
         <div class="d-flex gap-1">
             @guest

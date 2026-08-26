@@ -18,7 +18,14 @@
                 <img src="{{ asset('images/logo.png') }}" alt="Logo Creamy Mood">
                 Creamy Mood
             </a>
-            <div class="nav-links">
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="navLinks">
                 <a href="{{ route('home') }}" class="nav-link">Beranda</a>
                 <a href="{{ route('about') }}" class="nav-link">Tentang Kami</a>
                 <a href="{{ route('testimonials') }}" class="nav-link">Testimoni</a>
@@ -49,5 +56,13 @@
             <p>&copy; 2026 Creamy Mood. Hak cipta dilindungi undang-undang.</p>
         </div>
     </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

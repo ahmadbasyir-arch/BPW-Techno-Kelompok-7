@@ -375,7 +375,21 @@ a:hover {
     margin-bottom: 1.5rem;
     background: -webkit-linear-gradient(45deg, var(--chocolate-dark), var(--matcha-dark));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.hero-tagline {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--white);
+    background: linear-gradient(135deg, var(--matcha-dark), var(--chocolate));
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--radius-lg);
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-sm);
 }
 
 .hero-blob {
@@ -491,4 +505,100 @@ footer {
 .stars {
     color: #fbbf24;
     margin-bottom: 1rem;
+}
+
+/* -------------------------------- */
+/* Responsive & Mobile Optimizations*/
+/* -------------------------------- */
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 0;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--chocolate);
+    border-radius: 3px;
+    transition: var(--transition);
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* Media Queries for Mobile Screens */
+@media (max-width: 768px) {
+
+    /* Navbar Adjustment */
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(253, 250, 240, 0.98);
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: clip-path 0.4s ease-in-out, padding 0.4s ease-in-out;
+    }
+
+    .nav-links.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        padding: 2rem 0;
+    }
+
+    .nav-links .nav-link,
+    .nav-links .btn {
+        margin: 0.5rem 0;
+    }
+
+    /* Layout & Text Adjustment */
+    .container {
+        padding: 0 1rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .products-section {
+        padding: 3rem 0;
+    }
+
+    .product-grid {
+        gap: 1.5rem;
+    }
+
+    /* Center hero button on mobile */
+    .hero-content .d-flex {
+        justify-content: center;
+        width: 100%;
+    }
 }
