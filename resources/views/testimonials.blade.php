@@ -44,5 +44,33 @@
             <button type="submit" class="btn btn-matcha" style="width: 100%; justify-content: center; font-size: 1.1rem; padding: 1rem;">Kirim Testimoni</button>
         </form>
     </div>
+
+    @if($testimonials->count() > 0)
+    <div style="margin-top: 5rem;">
+        <div class="text-center" style="max-width: 600px; margin: 0 auto; margin-bottom: 3rem;">
+            <h2 class="hero-title" style="font-size: 2rem;">Apa Kata Mereka</h2>
+            <p>Ulasan dari pelanggan kami</p>
+        </div>
+
+        <div class="testimonial-grid">
+            @foreach($testimonials as $testimonial)
+                <div class="testimonial-card">
+                    <div class="stars">
+                        @for($i = 0; $i < $testimonial->rating; $i++)
+                            ⭐
+                        @endfor
+                    </div>
+                    <p style="margin-bottom: 1.5rem; font-style: italic;">"{{ $testimonial->comment }}"</p>
+                    <h4 style="margin: 0; color: var(--chocolate);">{{ $testimonial->name }}</h4>
+                    <small style="color: #64748b;">{{ $testimonial->created_at->diffForHumans() }}</small>
+                </div>
+            @endforeach
+        </div>
+
+        <div style="margin-top: 3rem; display: flex; justify-content: center;">
+            {{ $testimonials->links('pagination::simple-default') }}
+        </div>
+    </div>
+    @endif
 </div>
 @endsection

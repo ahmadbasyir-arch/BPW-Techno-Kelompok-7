@@ -97,6 +97,11 @@ a:hover {
     padding: 0 2rem;
 }
 
+.container-fluid {
+    width: 100%;
+    padding: 0 2rem;
+}
+
 .text-center {
     text-align: center;
 }
@@ -210,8 +215,8 @@ a:hover {
 }
 
 .nav-brand img {
-    height: 40px;
-    width: 40px;
+    height: 55px;
+    width: 55px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -471,17 +476,109 @@ a:hover {
 }
 
 /* Footer */
-footer {
+.footer {
     background: var(--chocolate-dark);
     color: var(--white);
-    padding: 3rem 0;
+    padding-top: 4rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    padding-bottom: 3rem;
+    text-align: left;
+}
+
+.footer-brand .footer-logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 1rem;
+    display: inline-flex;
+}
+
+.footer-brand .footer-logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.footer-brand .footer-desc {
+    color: var(--cream-light);
+    opacity: 0.8;
+}
+
+.footer-links h3,
+.footer-social h3 {
+    color: var(--matcha-light);
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: var(--cream-light);
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--matcha);
+    opacity: 1;
+    padding-left: 5px;
+}
+
+.footer-social p {
+    color: var(--cream-light);
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-lg);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.social-link:hover {
+    background: var(--matcha);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem 0;
     text-align: center;
+}
+
+.footer-bottom p {
+    margin-bottom: 0;
+    color: var(--cream-light);
+    opacity: 0.7;
+    font-size: 0.9rem;
 }
 
 /* Testimonials */
 .testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
     margin-top: 3rem;
 }
@@ -492,6 +589,8 @@ footer {
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
     text-align: center;
+    flex: 1 1 300px;
+    max-width: 400px;
 }
 
 .testimonial-avatar {
@@ -505,6 +604,41 @@ footer {
 .stars {
     color: #fbbf24;
     margin-bottom: 1rem;
+}
+
+/* Pagination */
+nav[role="navigation"] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+nav[role="navigation"] a,
+nav[role="navigation"] span {
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    box-shadow: var(--shadow-sm);
+    font-weight: 600;
+}
+
+nav[role="navigation"] a {
+    background: var(--white);
+    color: var(--matcha);
+    transition: var(--transition);
+}
+
+nav[role="navigation"] a:hover {
+    background: var(--matcha);
+    color: var(--white);
+}
+
+nav[role="navigation"] span {
+    background: var(--cream);
+    color: var(--chocolate-light);
+    cursor: not-allowed;
 }
 
 /* -------------------------------- */
@@ -559,28 +693,31 @@ footer {
         top: 100%;
         left: 0;
         width: 100%;
-        background: rgba(253, 250, 240, 0.98);
+        background: var(--cream-light);
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         padding: 0;
-        backdrop-filter: blur(10px);
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         transition: clip-path 0.4s ease-in-out, padding 0.4s ease-in-out;
+        border-top: 1px solid var(--gray-light);
     }
 
     .nav-links.active {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        padding: 2rem 0;
+        padding: 1.5rem 2rem;
     }
 
     .nav-links .nav-link,
     .nav-links .btn {
-        margin: 0.5rem 0;
+        margin: 0.75rem 0;
+        width: 100%;
+        text-align: left;
     }
 
     /* Layout & Text Adjustment */
-    .container {
+    .container,
+    .container-fluid {
         padding: 0 1rem;
     }
 

@@ -25,6 +25,9 @@
                 Kepuasan Anda adalah prioritas kami. Kami terus berinovasi dalam meracik minuman yang pas untuk segala suasana—baik saat Anda butuh dorongan energi di pagi hari, atau sekadar ingin bersantai di sore hari.
             </p>
             <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--color-matcha-dark);">Temukan Kami</h2>
+            <p style="line-height: 1.7; color: var(--color-gray); margin-bottom: 1rem;">
+                Saat ini kami hadir secara khusus di area kampus <strong>Politeknik Negeri Tanah Laut</strong> pada tanggal <strong>1 – 2 September 2026</strong>, pukul <strong>08.00 – 18.00 WIB</strong>. Jangan sampai kelewatan!
+            </p>
             <p style="line-height: 1.7; color: var(--color-gray);">
                 Ikuti terus perjalanan manis kami, berikan masukan Anda, dan bagikan momen keceriaan dengan menandai akun Instagram kami di 
                 <a href="https://instagram.com/creamy._mood" target="_blank" style="color: var(--color-matcha); font-weight: 600; text-decoration: none; border-bottom: 1px dotted currentColor;">@creamy._mood</a>.
