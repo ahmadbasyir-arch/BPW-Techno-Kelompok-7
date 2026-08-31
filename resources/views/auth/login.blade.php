@@ -23,7 +23,10 @@
             </div>
 
             <div class="form-group" style="text-align: left;">
-                <label for="password">Kata Sandi</label>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                    <label for="password" style="margin-bottom: 0;">Kata Sandi</label>
+                    <a href="{{ route('password.request') }}" style="font-size: 0.875rem;">Lupa Sandi?</a>
+                </div>
                 <div class="password-wrapper">
                     <input type="password" name="password" id="password" class="form-control" required>
                     <button type="button" class="password-toggle" id="togglePassword">

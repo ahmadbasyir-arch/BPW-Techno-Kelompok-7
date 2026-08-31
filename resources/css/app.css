@@ -641,6 +641,12 @@ nav[role="navigation"] span {
     cursor: not-allowed;
 }
 
+/* Hero Button (PC) */
+.btn-hero {
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+}
+
 /* -------------------------------- */
 /* Responsive & Mobile Optimizations*/
 /* -------------------------------- */
@@ -737,5 +743,11 @@ nav[role="navigation"] span {
     .hero-content .d-flex {
         justify-content: center;
         width: 100%;
+    }
+
+    /* Keep hero button original size on mobile */
+    .btn-hero {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
     }
 }
